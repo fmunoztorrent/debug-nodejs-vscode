@@ -1,0 +1,16 @@
+version: '3.3'
+
+services:
+
+  express_api_debug:
+    container_name: express_api_debug
+    build:
+      context: .
+      target: debug
+    volumes:
+      - ./src/:/app
+    ports:
+      - 5000:5000
+      - 9229:9229
+    restart: "no"
+      
